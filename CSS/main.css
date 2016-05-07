@@ -66,18 +66,23 @@ body {
 ol,
 ul {
     list-style: outside none none;
-    display: inline-block;
 }
 .list-items{
     text-align: center;
-    width:50%;
+    width:40%;
     margin-left:auto;
     margin-right:auto;
     margin-top:1rem;
     display:inline-block
 }
+.list-items li{
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom:1rem;
+}
 .list-items .tick {
     background-image: url(../images/tick.png);
+    float: right;
     height: 32px;
     width: 32px;
     background-size: 100%;
@@ -87,6 +92,7 @@ ul {
 }
 .list-items .cross {
     background-image: url(../images/cross.png);
+    float:right;
     height: 32px;
     width: 32px;
     background-size: 100%;
@@ -112,7 +118,14 @@ ul {
     margin-right: auto;
     text-align: center;
 }
+.ticked {
+    background-color: dimgrey;
+    border:1.5px dotted black
+}
 
+.ticked span{
+    color:aliceblue;
+}
 /* -------------------------------------
 Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
@@ -146,11 +159,17 @@ place all the mobile tables styles bellow this line
     body {
         color: blue;
     }
+    .list-items{
+        width:70%;
+    }
 }
 /*ipad potrait*/
 @media only screen and (max-width: 768px) {
     body {
         color: red;
+    }
+    .list-items{
+        width:80%;
     }
 }
 /*iPhone landscape*/
