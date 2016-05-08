@@ -2,7 +2,26 @@
 //click on "add" button to add what you have typed on to shopping list.
 
 function addItem() {
-    alert("I've just activated this button woop");
+    //alert("I've just activated this button woop");
+
+    var itemValue = $('#addItemValue').val();
+
+    //alert("Is this working");
+
+    if (itemValue.length=== 0) {
+        alert("Please add something!");
+    }
+    //add row to shopping list
+    else {
+        var row = $('<li class="current-item"><button type="favourite" id= "star">*</button><span>'+itemValue+'</span><button class="cross"></button><button class="tick"></button></li>');
+
+        //add row to other ones
+        $('.list-items').prepend(row);
+
+        //empty input box
+
+        $('#addItemValue').val('');
+    }
 }
 
 
@@ -25,6 +44,16 @@ function cross() {
 function bin() {
     //alert("I've just activated this button woop");
     $('.list-items').empty();
+}
+
+//star item and make it go to top of list
+
+function star() {
+    //alert("woop this is working");
+
+    var listItems = $('<li class="current-item"><button type="favourite" id= "star">*</button><span class="item">'+'</span><button class="cross"></button><button class="tick"></button></li>');
+
+    $(this).parent().prepend(listItems);
 }
 
 /* Step Two Using the functions */
@@ -53,3 +82,16 @@ $(document).on('click','.cross', cross);
 
 $(document).on('click', '.tick', tick);
 
+/* on click favourite item */
+
+$(document).on('click', '#star', star);
+
+
+/* on enter press of keyboard, add item*/
+
+$(document).on('keypress', function (key) {
+    //keycode == 13 is ENTER
+    if (key.keyCode == 13) {
+        addItem();
+    }
+});

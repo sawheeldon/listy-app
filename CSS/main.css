@@ -33,6 +33,7 @@ body {
     width:99.9%;
     height: 70%;
     margin:auto 0;
+    font-family: 'Passion One', cursive;
 
 }
 
@@ -126,6 +127,17 @@ ul {
 .ticked span{
     color:aliceblue;
 }
+
+#star{
+    width:1.5rem;
+    height:1.5rem;
+    border:1px color black;
+    border-radius: 10px 10px;
+    background-color:darkgoldenrod;
+    display:inline-block;
+    padding:0.2rem;
+    margin-right:0.3rem;
+}
 /* -------------------------------------
 Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
@@ -157,7 +169,6 @@ place all the mobile tables styles bellow this line
     for example the statament above says: IF the media on which this CSS is going to used is SCREEN (Mobiles, Tables, Laptops, Desktops or Projectors) and the maximum resolution of that device is 1024px, THEN apply the body color blue for all the text
     */
     body {
-        color: blue;
     }
     .list-items{
         width:70%;
@@ -166,7 +177,6 @@ place all the mobile tables styles bellow this line
 /*ipad potrait*/
 @media only screen and (max-width: 768px) {
     body {
-        color: red;
     }
     .list-items{
         width:80%;
@@ -175,12 +185,10 @@ place all the mobile tables styles bellow this line
 /*iPhone landscape*/
 @media only screen and (max-width: 480px) {
     body {
-        color: green;
     }
 }
 /*iPhone portrait*/
 @media only screen and (max-width: 320px) {
     body {
-        color: purple;
     }
 }
