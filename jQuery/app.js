@@ -51,9 +51,9 @@ function bin() {
 function star() {
     //alert("woop this is working");
 
-    var listItems = $('<li class="current-item"><button type="favourite" id= "star">*</button><span class="item">'+'</span><button class="cross"></button><button class="tick"></button></li>');
+    var listItems = $('li');
 
-    $(this).parent().prepend(listItems);
+    $(this).parent().append(listItems);
 }
 
 /* Step Two Using the functions */
