@@ -51,9 +51,8 @@ function bin() {
 function star() {
     //alert("woop this is working");
 
-    var listItems = $('li');
-
-    $(this).parent().append(listItems);
+//This = Star. The parent of the star is Li, the parent of the LI is UL. I am am telling "this" to prepend the UL and take along the parent of "this" which is the LI.
+    $(this).parent().parent().prepend($(this).parent());
 }
 
 /* Step Two Using the functions */
